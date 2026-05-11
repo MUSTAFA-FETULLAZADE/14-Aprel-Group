@@ -1,5 +1,7 @@
 package az.developia.spring_project_14aprel.entity;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,49 +11,36 @@ public class Person {
     private int age;
     private double salary;
 
-
+  
     public Person() {
-        this.id = 1;
-        this.name = "Ali Mammadov";
-        this.age = 25;
-        this.salary = 1500.50;
+        this.id = 101;
+        this.name = "Nicat Aliyev";
+        this.age = 28;
+        this.salary = 2500.0;
+        System.out.println(">>> Person obyekti yaradıldı (Constructor işlədi).");
     }
 
-
-    public int getId() {
-        return id;
+   
+    @PostConstruct
+    public void init() {
+        System.out.println("init");
     }
 
-    public void setId(int id) {
-        this.id = id;
+    @PreDestroy
+    public void destroy() {
+        System.out.println("destroy");
     }
 
-    public String getName() {
-        return name;
-    }
+   
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public int getAge() {
-        return age;
-    }
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    @Override
-    public String toString() {
-        return "Person [id=" + id + ", name=" + name + ", age=" + age + ", salary=" + salary + "]";
-    }
+    public double getSalary() { return salary; }
+    public void setSalary(double salary) { this.salary = salary; }
 }
