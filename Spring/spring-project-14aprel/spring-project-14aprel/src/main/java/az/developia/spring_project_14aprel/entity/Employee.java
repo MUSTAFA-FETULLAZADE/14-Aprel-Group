@@ -11,7 +11,7 @@ public class Employee {
     private int age;
     private double salary;
     @Autowired
-    @Qualifier(value="employee")
+    @Qualifier(value="computer")
     private Computer computer; 
 
 

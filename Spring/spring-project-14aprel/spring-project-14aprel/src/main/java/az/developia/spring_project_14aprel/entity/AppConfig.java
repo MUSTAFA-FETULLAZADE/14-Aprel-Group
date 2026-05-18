@@ -1,5 +1,8 @@
 package az.developia.spring_project_14aprel.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 
 import az.developia.spring_project_14aprel.entity.Computer;
 import az.developia.spring_project_14aprel.entity.RAM;
@@ -14,16 +17,16 @@ public class AppConfig {
         return new RAM(16, "DDR5");
     }
 
-//    @Bean
-//    public Computer computerBean(RAM ram) {
-//        Computer comp = new Computer();
-//        comp.setRam(ram); 
-//        return comp;
-//    }
-//    @Bean
-//    public Employee employeeBean(Computer computer) {
-//        Employee emp = new Employee();
-//        emp.setComputer(computer); 
-//        return emp;
-//    }
+    @Bean
+    public Computer computerBean(RAM ram) {
+        Computer comp = new Computer();
+        comp.setRam(ram); 
+        return comp;
+    }
+    @Bean
+    public Employee employeeBean(@Qualifier(value = "computerBean") Computer computer) {
+        Employee emp = new Employee();
+        emp.setComputer(computer); 
+        return emp;
+    }
 }

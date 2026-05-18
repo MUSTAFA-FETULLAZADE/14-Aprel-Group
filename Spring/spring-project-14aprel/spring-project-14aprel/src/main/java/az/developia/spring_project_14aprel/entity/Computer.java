@@ -3,7 +3,7 @@ package az.developia.spring_project_14aprel.entity;
 
 import org.springframework.stereotype.Component;
 
-
+@Component("computer")
 public class Computer {
     private int id;
     private String brand;

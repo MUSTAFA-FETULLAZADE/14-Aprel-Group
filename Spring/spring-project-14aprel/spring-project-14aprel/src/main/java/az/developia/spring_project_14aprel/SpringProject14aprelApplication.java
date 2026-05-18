@@ -1,23 +1,23 @@
 package az.developia.spring_project_14aprel;
 
-import az.developia.spring_project_14aprel.entity.Employee;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import az.developia.spring_project_14aprel.entity.Employee;
 
 @SpringBootApplication
 public class SpringProject14aprelApplication {
 
-    public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(SpringProject14aprelApplication.class, args);
+    public static void main(String[] declaration) {
 
+        ConfigurableApplicationContext context = SpringApplication.run(SpringProject14aprelApplication.class, declaration);
+        
 
-        Employee employee = context.getBean(Employee.class);
+        Employee emp = context.getBean("employeeBean", Employee.class);
+        
 
-
-        System.out.println("====================================");
-        System.out.println("EV İŞİ - İşçi və Kompüter Məlumatları:");
-        System.out.println(employee);
-        System.out.println("====================================");
+        System.out.println("Employee obyekti uğurla alındı: " + emp);
     }
+
 }

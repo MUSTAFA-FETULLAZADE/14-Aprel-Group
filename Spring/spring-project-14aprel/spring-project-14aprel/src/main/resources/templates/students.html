@@ -1,17 +1,29 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Tələbələr</title>
+    <title>Tələbə Məlumatı</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-    <h1>Tələbə Siyahısı</h1>
-    <ol>
-        <li>Əli Məmmədov</li>
-        <li>Leyla Əliyeva</li>
-        <li>Nicat Həsənov</li>
-        <li>Aysel Kərimova</li>
-    </ol>
+
+    <h2>Tələbə haqqında məlumat:</h2>
+    
+    <div class="card">
+        <p><strong>Ad:</strong> <span th:text="${studentAttr.name}">Ad bura gələcək</span></p>
+        <p><strong>Soyad:</strong> <span th:text="${studentAttr.surname}">Soyad bura gələcək</span></p>
+        <p><strong>Sinif:</strong> <span th:text="${studentAttr.grade}">Sinif bura gələcək</span></p>
+    </div>
+
     <br>
-    <a th:href="@{/home}">Geri qayıt</a>
+    <a th:href="@{/}">Ana səhifəyə qayıt</a>
+
 </body>
 </html>
