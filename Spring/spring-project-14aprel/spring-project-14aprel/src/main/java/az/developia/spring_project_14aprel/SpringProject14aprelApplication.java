@@ -14,7 +14,7 @@ public class SpringProject14aprelApplication {
         ConfigurableApplicationContext context = SpringApplication.run(SpringProject14aprelApplication.class, declaration);
         
 
-        Employee emp = context.getBean("employeeBean", Employee.class);
+        Employee emp = context.getBean(Employee.class);
         
 
         System.out.println("Employee obyekti uğurla alındı: " + emp);

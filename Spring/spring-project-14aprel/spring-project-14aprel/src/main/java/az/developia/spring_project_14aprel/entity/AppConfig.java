@@ -1,32 +1,28 @@
 package az.developia.spring_project_14aprel.entity;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-
-
-import az.developia.spring_project_14aprel.entity.Computer;
-import az.developia.spring_project_14aprel.entity.RAM;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ConfigurationProperties(prefix = "app")
 public class AppConfig {
 
-    @Bean
-    public RAM ramBean() {
-        return new RAM(16, "DDR5");
+    private String name;
+    private int version;
+
+    public String getName() {
+        return name;
     }
 
-    @Bean
-    public Computer computerBean(RAM ram) {
-        Computer comp = new Computer();
-        comp.setRam(ram); 
-        return comp;
+    public void setName(String name) {
+        this.name = name;
     }
-    @Bean
-    public Employee employeeBean(@Qualifier(value = "computerBean") Computer computer) {
-        Employee emp = new Employee();
-        emp.setComputer(computer); 
-        return emp;
+
+    public int getVersion() {
+        return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
     }
 }
