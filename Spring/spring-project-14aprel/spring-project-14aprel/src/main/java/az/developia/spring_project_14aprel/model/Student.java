@@ -1,11 +1,15 @@
 package az.developia.spring_project_14aprel.model;
 
+import lombok.Data;
+
+@Data
 
 public class Student {
     private Long id;
     private String name;
     private String surname;
     private String email;
+    
 
 
     public Student() {}
