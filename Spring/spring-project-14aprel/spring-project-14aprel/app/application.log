@@ -1,0 +1,12 @@
+2026-05-28T19:18:45.432+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] a.d.s.SpringProject14aprelApplication    : Starting SpringProject14aprelApplication using Java 21.0.10 with PID 5760 (C:\Github\14Aprel_group\14-Aprel-Group\Spring\spring-project-14aprel\spring-project-14aprel\target\classes started by MUSTA in C:\Github\14Aprel_group\14-Aprel-Group\Spring\spring-project-14aprel\spring-project-14aprel)
+2026-05-28T19:18:45.434+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] a.d.s.SpringProject14aprelApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T19:18:45.471+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-28T19:18:45.471+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-28T19:18:46.301+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9086 (http)
+2026-05-28T19:18:46.314+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T19:18:46.315+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-28T19:18:46.347+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-28T19:18:46.348+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 876 ms
+2026-05-28T19:18:46.651+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-28T19:18:46.675+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9086 (http) with context path ''
+2026-05-28T19:18:46.683+04:00  INFO 5760 --- [spring-project-14aprel] [restartedMain] a.d.s.SpringProject14aprelApplication    : Started SpringProject14aprelApplication in 1.549 seconds (process running for 1.937)
